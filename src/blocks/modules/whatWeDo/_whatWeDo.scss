@@ -1,0 +1,37 @@
+.container-info {
+    @include xl(max-width, rem(1920));
+    background-color: #ffffff;
+    background-size: cover;
+    padding-right: 255px;
+}
+.info{
+    @include isFlex($justify: space-between);
+    margin: 115px 0 100px 0;
+
+    &-image{
+        margin: 0 0 0 100px;
+    }
+    &-content{
+        
+        h1{
+            @include Roboto;
+            color: #4b4b4d;
+            font-size: 50px;
+        }
+        p{
+            color: #4b4b4d;
+            font-size: 18px;
+            @include Roboto;
+            margin-top: 40px;
+            line-height: 2;
+        }
+        button{
+            @include button($margin: 25px 0 0 0 , $background-color: #4b4b4d,);
+            transition: transform .2s;
+        }
+        button:hover{
+            transform: scale(1.1);
+        }
+    }
+}
+
