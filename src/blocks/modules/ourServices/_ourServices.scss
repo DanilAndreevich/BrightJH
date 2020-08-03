@@ -1,0 +1,56 @@
+.container-services{
+    @include xl(max-width, rem(1920));
+    height: 100vh;
+    padding-left: 255px;
+    padding-right: 255px;
+}
+
+.services-content{
+
+    &-heading{
+        @include isFlex($direction: column);
+        color: #4b4b4d;
+
+        h1{
+            @include Roboto;
+        }
+        p{
+            @include Roboto;
+            text-align: center;
+        }
+    }
+    &-more{
+        @include isFlex($direction: row);
+                
+        &__block{
+            color: #4b4b4d;
+            width: 30%;
+            border: 2px solid transparent;
+            border-image: linear-gradient(#75c48b , #c9c575);
+            border-image-slice: 1;
+            margin: 100px 35px 60px 0;
+            width: 360px;
+            height: 370px;
+
+            h2{
+                @include Roboto;
+            }
+
+            button{
+                @include button($background-color: #4b4b4d,$color: #ffffff);
+                transition: transform .2s;
+            }
+            
+            button:hover{
+                @include button($color: #ffffff);
+                background-image: linear-gradient(#75c48b , #c9c575);
+                transform: scale(1.1);
+            }
+            
+        }
+        
+        &__image{
+            border: 1px solid black;
+        }
+    }
+}
