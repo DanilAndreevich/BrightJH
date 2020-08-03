@@ -1,14 +1,13 @@
-.container {
+.container-header{
     @include xl(max-width, rem(1920));
+    @include bgImage($url: '../../../img/bg.png' , $size: cover );
     height: 100vh;
-    background: url(../../../img/bg.png) no-repeat;
-    background-size: cover;
     padding-left: 255px;
     padding-right: 255px;
 }
 .header{
-    display: flex;
-    justify-content: space-between;
+    @include isFlex($justify: space-between);
+
     &-logo{
         
     }
