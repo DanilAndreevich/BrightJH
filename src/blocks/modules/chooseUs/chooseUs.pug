@@ -1,0 +1,20 @@
+- const choose = [{number: "200",title: "EMPLOYEES", text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since it to make a type specimen book."},{number: "220",title: "PROJECTS", text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since it to make a type specimen book."},{number: "200",title: "CLIENTS", text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since it to make a type specimen book."}]
+
+.choose-container
+    .choose-container-left
+        h4 WHY CHOOSE US 
+        h1 Make Life With Bright JH
+        p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        .choose-container-left-buttons
+            button.choose-container-left-buttons__signup SIGN UP FREE
+            button.choose-container-left-buttons__watch WATCH VIDEO
+    .choose-container-right
+        each obj in choose
+            .choose-container-right__block
+                .choose-container-right__block-numbers
+                    h1= obj.number
+                    h4= obj.title
+                .choose-container-right__block-vertical
+                    img(src="../../../img/divider.png", alt="divider")
+                .choose-container-right__block-text
+                    p= obj.text
