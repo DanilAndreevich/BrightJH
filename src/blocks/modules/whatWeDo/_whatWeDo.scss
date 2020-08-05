@@ -1,32 +1,32 @@
 .container-info {
-    @include xl(max-width, rem(1920));
-    background-color: #ffffff;
-    background-size: cover;
-    padding-right: 255px;
+    background-color: $white;
+    padding-bottom: 205px;
 }
 .info{
-    @include isFlex($justify: space-between);
-    margin: 115px 0 100px 0;
-
+    @include row-flex();
+    margin: 0 auto;
     &-image{
-        margin: 0 0 0 100px;
+        margin: 115px 0 0 50px;
     }
     &-content{
-        
-        h1{
+        @include col();
+        @include container();
+        justify-content: center;
+        margin-top: 220px;
+        h1,p{
             @include Roboto;
-            color: #4b4b4d;
-            font-size: 50px;
+            color: $gray;
+        }
+        h1{
+            font-size: 36px;
         }
         p{
-            color: #4b4b4d;
             font-size: 18px;
-            @include Roboto;
+            line-height: 1.5;
             margin-top: 40px;
-            line-height: 2;
         }
         button{
-            @include button($margin: 25px 0 0 0 , $background-color: #4b4b4d,);
+            @include button($margin: 25px 0 0 0 , $background-color: $gray);
             transition: transform .2s;
         }
         button:hover{
@@ -34,4 +34,4 @@
         }
     }
 }
-
+  

@@ -1,55 +1,44 @@
-.container-header{
-    @include xl(max-width, rem(1920));
-    @include bgImage($url: '../../../img/bg.png' , $size: cover );
-    height: 100vh;
-    padding-left: 255px;
-    padding-right: 255px;
-}
 .header{
-    @include isFlex($justify: space-between);
-
-    &-logo{
-        
-    }
-    &-menu{
-        @include Roboto;
-        padding-top: 35px;
-        a {
-            color: #ffffff;
-            text-decoration: none;
-
-        }
-        a:not(:last-child){
-            padding-right: 60px;
-        }
-        a:hover{
-            text-decoration: underline;
-        }
-        &__list{
-
-            &__item{
-
+    @include bgImage($url: '../../../img/bg.png' , $size: cover );
+    &-nav{
+        @include container();
+        @include row-flex();
+        margin: 0 auto;
+        justify-content: space-between;
+        &-menu{
+            @include Roboto;
+            padding-top: 35px;
+            a{
+                color: #ffffff;
+                text-decoration: none;
             }
-
+            a:not(:last-child){
+                padding-right: 60px;
+            }
+            a:hover{
+                text-decoration: underline;
+            }      
         }
-        
     }
     &-form{
+        @include container();
         margin-top: 220px;
+        padding-bottom: 195px;
         h1{
             @include Roboto;
-            color: #ffffff;
             font-size: 50px;
+            color: $white;
         }
         p{
-            color: #ffffff;
-            font-size: 18px;
             @include Sans;
-            margin-top: 50px;
+            color: $white;
+            font-size: 18px;
             line-height: 2;
+            margin-top: 50px;
         }
         button{
             @include button;
+            margin-top: 50px;
             transition: transform .2s;
         }
         button:hover{
