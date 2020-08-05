@@ -1,0 +1,90 @@
+.footer-container{
+    background-color: $footerColor;
+}
+.footer-content{
+    @include container();
+    @include row-flex();
+    margin: 0 auto;
+    padding: 105px 0 105px 0;
+    &-info{
+        @include col();
+        @include size(3);
+        p{
+            @include Sans;
+            color: $gray;
+            font-size: 14px;
+            line-height: 1.714;
+        }
+    }
+    &-links{
+        @include col();
+        @include size(2);
+        color: $gray;
+        h2, li{
+            @include Roboto;
+        }
+        h2{
+            margin-bottom: 40px;
+            font-size: 20px;
+        }
+        li{
+            margin-bottom: 10px;
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: $gray;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+    }
+    &-feed{
+        @include col();
+        @include size(4);
+        h2{
+            @include Roboto;
+            color: $gray;
+            font-size: 20px;
+        }
+        li{
+            @include Sans;
+            list-style: none;
+            text-decoration: underline;
+            line-height: 1.625;
+            text-align: justify
+        }
+        a{
+            @include Sans;
+            color: $green;
+        }
+        
+    }
+    &-offices{
+        @include col();
+        @include size(3);
+        h2{
+            @include Roboto;
+            color: $gray;
+            font-size: 20px;
+        }
+        p{
+            @include Sans;
+            font-size: 14px;
+            line-height: 1.714;
+        }
+    }
+}
+
+.footer-copy{
+    text-align: center;
+    height: 90px;
+    background-color: $bgColor;
+    p{
+        @include Roboto;
+        color: $gray;
+        font-weight: bold;
+        padding-top: 40px;
+        margin: 0;
+    }
+}
