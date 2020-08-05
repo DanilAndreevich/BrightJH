@@ -9,7 +9,6 @@
         margin: 115px 0 0 50px;
     }
     &-content{
-        @include col();
         @include container();
         justify-content: center;
         margin-top: 220px;

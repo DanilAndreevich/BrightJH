@@ -1,8 +1,8 @@
-@mixin button($background-color: #16c2a3, $color: #ffffff, $margin: 50 0 0 0) {
+@mixin button($background-color: #16c2a3, $color: #ffffff, $width: 180px,$margin: 50 0 0 0) {
     @include Roboto;
     background-color: $background-color;
     color: $color;
-    width: 180px;
+    width: $width;
     height: 55px;
     border-radius: 27.5px;
     border: none;
