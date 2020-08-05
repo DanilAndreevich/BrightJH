@@ -1,0 +1,106 @@
+.container-blog{
+    @include container();
+}
+.blog-title{
+    @include container;
+    text-align: center;
+    margin-bottom: 100px;
+    h1 , p {
+        color: $gray;
+    }
+    h1{
+        @include Roboto;
+    }
+    p{
+        @include Sans;
+        line-height: 1.5;
+    }
+      
+}
+.blog-news{
+    @include row-flex();
+    justify-content: space-between;
+    &-main{
+        
+        &__content{
+            box-shadow: 0px 0px 25.65px 1.35px rgba(0, 0, 0, 0.15);
+            &-date{
+                position: absolute;
+                color: $white;
+                background-color: $green;
+                width: 70px;
+                height: 60px;
+                text-align: center;
+                p{
+                    @include Roboto;
+                    line-height: 0.5;
+                }
+            }
+            &-image{
+                @include bgImage($url: '../../../img/news/news-1.png', $size: cover);
+                height: 470px;
+                width: 570px;
+            }
+            &-title{
+                width: 350px;
+                margin-left: 20px;
+                padding-bottom: 17px;
+                p{
+                    @include Sans;
+                    font-size: 24px;
+                    line-height: 1.5;
+                    color: $gray; 
+                    word-break: break-all;                     
+                }
+                a{
+                    @include Roboto;
+                    text-decoration: none;
+                    color: $gray;
+                }
+
+            }
+            
+        }
+
+    }
+
+    &-etc{
+        @include col();
+        @include size(6);
+        &__content{
+            @include row-flex();
+            box-shadow: 0px 0px 25.65px 1.35px rgba(0, 0, 0, 0.15);
+            margin-bottom: 35px;
+            &-date{
+                position: absolute;
+                color: $white;
+                background-color: $green;
+                width: 45px;
+                height: 45px;
+                text-align: center;
+                p{
+                    @include Roboto;
+                    line-height: 0.1;
+                }
+            }
+            &-image{
+                
+            }
+            &-title{
+                width: 400px;
+                margin-left: 30px;
+                p{
+                    @include Sans;
+                    font-size: 24px;
+                    line-height: 1.5;
+                    color: $gray;         
+                }
+                a{
+                    @include Roboto;
+                    text-decoration: none;
+                    color: $gray;
+                }
+            }
+        }
+    }
+}
