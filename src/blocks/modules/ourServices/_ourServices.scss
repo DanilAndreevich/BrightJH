@@ -6,6 +6,7 @@
 .services-content {
     &-heading {
         text-align: center;
+        margin-bottom: 100px;
         color: $gray;
         h1,p{
             @include Roboto;
@@ -60,7 +61,12 @@
                     }
                     input::placeholder,input[type~="email"]{
                         @include Roboto;
+                    }
+                    input::placeholder{
                         margin-left: 25px;
+                    }
+                    input[type~="email"]{
+                        padding-left: 25px;
                     }
                 }
             h2,p{
