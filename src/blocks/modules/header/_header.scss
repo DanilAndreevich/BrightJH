@@ -1,47 +1,47 @@
-.header{
-    @include bgImage($url: '../../../img/bg.png' , $size: cover );
-    &-nav{
+.header {
+    @include bgImage($url: "../../../img/bg.png" , $size: cover );
+    &-nav {
         @include container();
         @include row-flex();
-        margin: 0 auto;
         justify-content: space-between;
-        &-menu{
+        margin: 0 auto;
+        &-menu {
             @include Roboto;
             padding-top: 35px;
-            a{
-                color: #ffffff;
+            a {
+                color: $white;
                 text-decoration: none;
             }
-            a:not(:last-child){
+            a:not(:last-child) {
                 padding-right: 60px;
             }
-            a:hover{
+            a:hover {
                 text-decoration: underline;
-            }      
+            }
         }
     }
-    &-form{
+    &-form {
         @include container();
         margin-top: 220px;
         padding-bottom: 195px;
-        h1{
+        h1 {
             @include Roboto;
-            font-size: 50px;
             color: $white;
+            font-size: 50px;
         }
-        p{
+        p {
             @include Sans;
             color: $white;
             font-size: 18px;
             line-height: 2;
             margin-top: 50px;
         }
-        button{
+        button {
             @include button;
             margin-top: 50px;
             transition: transform .2s;
         }
-        button:hover{
+        button:hover {
             transform: scale(1.1);
         }
     }
