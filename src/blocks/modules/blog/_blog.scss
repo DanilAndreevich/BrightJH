@@ -1,101 +1,97 @@
-.container-blog{
+.blog-container {
     @include container();
+    padding-bottom: 100px;
 }
-.blog-title{
+.blog-title {
     @include container;
     text-align: center;
+    width: 970px;
     margin-bottom: 100px;
-    h1 , p {
+    h1, p {
         color: $gray;
     }
-    h1{
+    h1 {
         @include Roboto;
     }
-    p{
+    p {
         @include Sans;
         line-height: 1.5;
     }
-      
 }
-.blog-news{
+.blog-news {
     @include row-flex();
     justify-content: space-between;
-    &-main{
+    &-main {
         
-        &__content{
-            box-shadow: 0px 0px 25.65px 1.35px rgba(0, 0, 0, 0.15);
-            &-date{
+        &__content {
+            box-shadow: 0 0 25.65px 1.35px rgba(0, 0, 0, 0.15);
+            &__date {
                 position: absolute;
                 color: $white;
                 background-color: $green;
                 width: 70px;
                 height: 60px;
                 text-align: center;
-                p{
+                p {
                     @include Roboto;
                     line-height: 0.5;
                 }
             }
-            &-image{
-                @include bgImage($url: '../../../img/news/news-1.png', $size: cover);
-                height: 470px;
+            &__image {
+                @include bgImage($url: "../../../img/news/news-1.png", $size: cover);
                 width: 570px;
+                height: 470px;
             }
-            &-title{
+            &__title {
                 width: 350px;
                 margin-left: 20px;
                 padding-bottom: 17px;
-                p{
+                p {
                     @include Sans;
                     font-size: 24px;
                     line-height: 1.5;
-                    color: $gray; 
-                    word-break: break-all;                     
+                    color: $gray;
+                    word-break: break-all;
                 }
-                a{
+                a {
                     @include Roboto;
                     text-decoration: none;
                     color: $gray;
                 }
-
             }
-            
         }
-
     }
 
-    &-etc{
+    &-etc {
         @include col();
         @include size(6);
-        &__content{
+        &__content {
             @include row-flex();
-            box-shadow: 0px 0px 25.65px 1.35px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0 25.65px 1.35px rgba(0, 0, 0, 0.15);
             margin-bottom: 35px;
-            &-date{
+            &__date {
                 position: absolute;
                 color: $white;
                 background-color: $green;
                 width: 45px;
                 height: 45px;
                 text-align: center;
-                p{
+                p {
                     @include Roboto;
                     line-height: 0.1;
                 }
             }
-            &-image{
-                
-            }
-            &-title{
+
+            &__title {
                 width: 400px;
                 margin-left: 30px;
-                p{
+                p {
                     @include Sans;
                     font-size: 24px;
                     line-height: 1.5;
-                    color: $gray;         
+                    color: $gray;
                 }
-                a{
+                a {
                     @include Roboto;
                     text-decoration: none;
                     color: $gray;

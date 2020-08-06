@@ -1,30 +1,31 @@
 - const news =[{day: '21', month: 'APR', img: '../../../img/news/news-2.png',title: 'Lorem Ipsum is simply dummy text of the printing'},{day: '22', month: 'APR', img: '../../../img/news/news-3.png',title: 'Lorem Ipsum is simply dummy text of the printing'},{day: '23', month: 'APR', img: '../../../img/news/news-4.png',title: 'Lorem Ipsum is simply dummy text of the printing'}]
 - const lorem = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 
-.container-blog
-    .blog-title
-        h1 Our Latest Blog
-        p= lorem
-    .blog-news
-        .blog-news-main
-            .blog-news-main__content
-                .blog-news-main__content-date
-                    p 20
-                    p APR
-                .blog-news-main__content-image
-                .blog-news-main__content-title
-                    p Lorem Ipsum is simply dummy text of the printing
-                    a(href="") 
-                        b READ MORE
-        .blog-news-etc
-            each obj in news
-                .blog-news-etc__content 
-                    .blog-news-etc__content-date
-                        p= obj.day
-                        p= obj.month
-                    .blog-news-etc__content-image
-                        img(src=obj.img, alt="")
-                    .blog-news-etc__content-title
-                        p= obj.title
-                        a(href="") 
-                            b READ MORE
+.blog
+    .blog-container
+        .blog-title
+            h1 Our Latest Blog
+            p= lorem
+        .blog-news
+            .blog-news-main
+                .blog-news-main__content
+                    .blog-news-main__content__date
+                        p 20
+                        p APR
+                    .blog-news-main__content__image
+                    .blog-news-main__content__title
+                        p Lorem Ipsum is simply dummy text of the printing
+                        b
+                            +link("#", "READ MORE")
+            .blog-news-etc
+                each obj in news
+                    .blog-news-etc__content 
+                        .blog-news-etc__content__date
+                            p= obj.day
+                            p= obj.month
+                        .blog-news-etc__content__image
+                            img(src=obj.img, alt="")
+                        .blog-news-etc__content__title
+                            p= obj.title
+                            b
+                                +link("#", "READ MORE")

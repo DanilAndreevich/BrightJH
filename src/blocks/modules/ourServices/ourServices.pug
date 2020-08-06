@@ -1,32 +1,27 @@
 - const services = [{title: "Network & Security Engineering",text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. industry's standard a type specimen book",pic: "../../../img/services/1.png"},{title: "Server & Storage Management",text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. industry's standard a type specimen book",  pic: "../../../img/services/2.png" },{title: "Hardware & Software Installations",text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. industry's standard a type specimen book", pic: "../../../img/services/3.png"},{title: "Cloud Solutions",text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. industry's standard a type specimen book", pic: "../../../img/services/4.png"},{title: "Hosted Email & Collaboration Suites",text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. industry's standard a type specimen book", pic: "../../../img/services/5.png"}]
+- const textServices = "Fieldmagic is the most comprehensive field service & asset management platform on the market, combining ease of use, performance and flexibility with out of the box integration with all major accounting and ERP platforms."
 
-.container-services
-    .services-content
-        .services-content-heading
+.services
+    .content
+        .content-heading
             h1 Our Services
-            p 
-                |Fieldmagic is the most comprehensive field service & asset management platform on the market, 
-                br
-                |combining ease of use, performance and flexibility with out of the box integration with all major 
-                br
-                |accounting and ERP platforms. 
-        .services-content-more
+            p= textServices
+        .content-more
             each obj in services
-                .services-content-more__block
-                    .services-content-more__image
+                .content-more__block
+                    .content-more__image
                         img(src=obj.pic alt="")
-                    .services-content-more__title
+                    .content-more__title
                         h2= obj.title
-                    .services-content-more__text
+                    .content-more__text
                         p= obj.text
-            .services-content-more__block
-                .services-content-more__subscribe__title
+            .content-more__block
+                .content-more__subscribe__title
                     h1 Join & Stay Connect
-                .services-content-more__subscribe__text
+                .content-more__subscribe__text
                     p Stay updated with the latest news,stories and discounts.
-                .services-content-more__subscribe__input
+                .content-more__subscribe__input
                     input(
                         type='email',
                         placeholder= 'Email',
                     )
-                    

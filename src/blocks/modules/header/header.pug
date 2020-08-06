@@ -1,25 +1,25 @@
+include ../../components/logo/logo
+
 .header
     .header-container
         .header-nav
-            .header-nav-logo
-                a(href="#")
-                    img(src="../../../img/logo.png", alt="logo")
-            .header-nav-menu 
-                nav.header-nav-menu__list
+            +logo('#','../../../img/logo.png')
+            .header-nav__menu 
+                nav.header-nav__menu__list
                     +link('#','HOME')(class="header-menu__item")
                     +link('#','ABOUT')(class="header-menu__item")
                     +link('#','SERVICE')(class="header-menu__item")
                     +link('#','BLOG')(class="header-menu__item")
                     +link('#','CONTACT US')(class="header-menu__item")
-    .header-form
-        h1 
-            |Technology Website 
-            br
-            |Made Easy!  
-        p 
-            |The most complete field service software for IT & Mobile
-            br
-            |Support, Fire Services, Electrical, Maintenance, HVAC & Se-
-            br
-            |curity Industries
-        button SIGN UP FREE
+        .header-form
+            h1 
+                |Technology Website 
+                br
+                |Made Easy!  
+            p 
+                |The most complete field service software for IT & Mobile
+                br
+                |Support, Fire Services, Electrical, Maintenance, HVAC & Se-
+                br
+                |curity Industries
+            button SIGN UP FREE

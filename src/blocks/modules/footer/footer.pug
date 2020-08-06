@@ -1,30 +1,33 @@
 - const links = ['Home', 'About Us', 'Support Center', 'Services', 'Blog', 'Contact Us', 'Privacy Policy', 'Terms & Condition']
 - const feed = [{text: 'we can’t recommend anyone specific, but you can find a list of freelenacers working wit… ', url: 'https://t.co/fs1gMcMOej'},{text: 'we can’t recommend anyone specific, but you can find a list of freelenacers working wit… ', url: 'https://t.co/fs1gMcMOej'}]
+- const textFooter = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+- const copyright = "2020 © Copyright Bright JH"
 
-.footer-container
-    .footer-content
+include ../../components/logo/logo
+
+.footer
+    .footer-container
         .footer-content-info
-            .footer-content-info-logo
-                img(src="../../../img/logo.png", alt="logo")
+            +logo("#","../../../img/logo.png")
             .footer-content-info-text
-                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                p= textFooter
         .footer-content-links
             h2 Important Links
             ul
             each obj in links
                 li
-                    a(href="")=obj
+                    +link('#',obj)
         .footer-content-feed
             h2 Twitter Feed
             ul
             each obj in feed
                 li= obj.text 
-                    a(href=obj.url)= obj.url
+                    +link(obj.url,obj.url)
         .footer-content-offices
             h2 Our Offices
             p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             img(src="../../../img/map.png", alt="map")
 .footer-copy
-    p 2020 © Copyright Bright JH
+    p= copyright
 
 

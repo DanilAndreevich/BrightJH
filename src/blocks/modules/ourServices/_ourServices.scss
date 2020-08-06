@@ -1,14 +1,16 @@
-.container-services {
+.services {
     @include container();
     padding-bottom: 200px;
 }
 
-.services-content {
+.content {
     &-heading {
+        margin: 0 auto;
         text-align: center;
+        width: 700px;
         margin-bottom: 100px;
         color: $gray;
-        h1,p{
+        h1, p {
             @include Roboto;
             color: $gray;
         }
@@ -23,62 +25,62 @@
     &-more {
         @include row-flex();
         justify-content: space-between;
-        &__subscribe__title{
+        &__subscribe__title {
             margin-top: 90px;
         }
         &__block {
             @include col();
             @include size(4);
+            width: 30%;
+            height: 370px;
+            border: 2px solid transparent;
             text-align: center;
             color: $gray;
-            width: 30%;
-            border: 2px solid transparent;
             border-image: linear-gradient(#75c48b, #c9c575);
             border-image-slice: 1;
-            height: 370px;
-                &:nth-child(1),&:nth-child(2),&:nth-child(3){
-                    margin-bottom: 60px;
+            &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+                margin-bottom: 60px;
+            }
+            &:nth-child(6) {
+                @include bgImage($url: "../../../img/services/bg-subscribe.png", $size: cover);
+                border: 2px solid $green;
+                color: #ffffff;
+                h1, p {
+                    @include Roboto;
                 }
-                &:nth-child(6){
-                   @include bgImage($url: '../../../img/services/bg-subscribe.png', $size: cover);
-                   color: #ffffff;
-                   border: 2px solid $green;
-                    h1,p{
-                        @include Roboto;
-                    }
-                    h1{
-                        font-size: 30px;
-                    }
-                    p{
-                        text-align: center;
-                    }
-                    input {
-                        width: 325px;
-                        height: 60px;
-                        border-radius: 30px;
-                        border: none;
-                        outline: none;
-                    }
-                    input::placeholder,input[type~="email"]{
-                        @include Roboto;
-                    }
-                    input::placeholder{
-                        margin-left: 25px;
-                    }
-                    input[type~="email"]{
-                        padding-left: 25px;
-                    }
+                h1 {
+                    font-size: 30px;
                 }
-            h2,p{
+                p {
+                    text-align: center;
+                }
+                input {
+                    width: 325px;
+                    height: 60px;
+                    border: none;
+                    border-radius: 30px;
+                    outline: none;
+                }
+                input::placeholder, input[type~="email"] {
+                    @include Roboto;
+                }
+                input::placeholder {
+                    margin-left: 25px;
+                }
+                input[type~="email"] {
+                    padding-left: 25px;
+                }
+            }
+            h2, p {
                 @include Roboto;
             }
             h2 {
                 text-align: center;
                 font-size: 18px;
             }
-            p{
-                line-height: 1.563;                
-            }          
+            p {
+                line-height: 1.563;
+            }
         }
         &__image {
             margin-top: 35px;
@@ -88,5 +90,4 @@
             margin: 0 30px 0 30px;
         }
     }
-    
 }

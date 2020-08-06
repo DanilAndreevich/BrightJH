@@ -1,74 +1,74 @@
-.footer-container{
+.footer{
     background-color: $footerColor;
 }
-.footer-content{
+.footer-container  {
     @include container();
     @include row-flex();
+    justify-content: space-between;
     margin: 0 auto;
     padding: 105px 0 105px 0;
-    &-info{
-        @include col();
+}
+.footer-content{
+    &-info {
         @include size(3);
-        p{
+        p {
             @include Sans;
             color: $gray;
             font-size: 14px;
             line-height: 1.714;
         }
     }
-    &-links{
+    &-links {
         @include col();
         @include size(2);
         color: $gray;
-        h2, li{
+        h2, li {
             @include Roboto;
         }
-        h2{
+        h2 {
             margin-bottom: 40px;
             font-size: 20px;
         }
-        li{
+        li {
             margin-bottom: 10px;
             list-style: none;
         }
-        a{
+        a {
             text-decoration: none;
             color: $gray;
         }
-        a:hover{
+        a:hover {
             text-decoration: underline;
         }
     }
-    &-feed{
+    &-feed {
         @include col();
         @include size(4);
-        h2{
+        h2 {
             @include Roboto;
             color: $gray;
             font-size: 20px;
         }
-        li{
+        li {
             @include Sans;
             list-style: none;
             text-decoration: underline;
             line-height: 1.625;
-            text-align: justify
+            text-align: justify;
         }
-        a{
+        a {
             @include Sans;
             color: $green;
         }
-        
     }
-    &-offices{
-        @include col();
+    &-offices {
         @include size(3);
-        h2{
+        h2 {
             @include Roboto;
             color: $gray;
             font-size: 20px;
         }
-        p{
+        p {
             @include Sans;
             font-size: 14px;
             line-height: 1.714;
@@ -76,11 +76,11 @@
     }
 }
 
-.footer-copy{
+.footer-copy {
     text-align: center;
     height: 90px;
     background-color: $bgColor;
-    p{
+    p {
         @include Roboto;
         color: $gray;
         font-weight: bold;

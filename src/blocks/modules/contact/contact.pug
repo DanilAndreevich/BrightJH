@@ -1,11 +1,11 @@
-.contact-container
+- const textContact = "Feature creep going forward you better eat a reality sandwich before you walk back in that boardroom can you send me an invite"
+
+include ../../components/image/image
+
+section.contact
     .contact-info
         .contact-info-content
             h1 24/7 Real Support
-            p 
-                |Feature creep going forward you better eat a reality sandwich
-                br
-                |before you walk back in that boardroom can you send me an invite
+            p= textContact
             button CONTACT SUPPORT
-        .contact-info-image
-            img(src="../../../img/woman.png", alt="woman")
+        +image("../../../img/woman.png","woman")

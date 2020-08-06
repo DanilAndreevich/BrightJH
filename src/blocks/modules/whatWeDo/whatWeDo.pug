@@ -1,15 +1,11 @@
-.container-info
-    .info
-        .info-image
-            img(src="../../../img/what-we-do.png", alt="hands with computers")
+- const text = "Small businesses and individuals in Teton County, Wyoming wanting the best of breed technology and information security services. I work with each customer to determine their needs and integrate multiple platforms to create a custom solution. "
+
+include ../../components/image/image
+
+.info
+    .info-container
+        +image('../../../img/what-we-do.png','what we do')
         .info-content
             h1 What We do?
-            p 
-                |Small businesses and individuals in Teton County, Wyoming wanting the best
-                br
-                |of breed technology and information security services. I work with each cus-
-                br
-                |tomer to determine their needs and integrate multiple platforms to create a 
-                br
-                |custom solution. 
+            p= text
             button LEARN MORE

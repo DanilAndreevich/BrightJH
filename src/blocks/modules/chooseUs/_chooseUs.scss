@@ -1,80 +1,72 @@
-.choose-container{
+.choose-container {
     @include container();
     @include row-flex();
-    margin: 0 auto;
     justify-content: space-between;
-    padding-bottom: 150px;
-
-    &-left{
+    margin: 0 auto;
+    &-left {
         @include col();
         @include size(5);
-        h4, h1 , p{
+        h4, h1, p {
             color: $gray;
         }
-        h1 , p {
+        h1, p {
             @include Sans;
         }
-        h4{
+        h4 {
             @include Roboto;
             font-size: 14px;
             line-height: 2.58;
             font-weight: 400;
         }
-        h1{
+        h1 {
             font-size: 40px;
-            line-height: 1.003; 
-        }  
-        p{
+            line-height: 1.003;
+        }
+        p {
             font-size: 17px;
-            line-height: 1.411;            
-        }  
-        &-buttons{
+            line-height: 1.411;
+        }
+        &-buttons {
             margin-top: 60px;
-            &__signup{
+            &__signup {
                 @include button();
                 margin-right: 30px;
-            }   
-            &__watch{
-                @include button($background-color: $gray)
             }
-        }     
-        
+            &__watch {
+                @include button($background-color: $gray); }
+        }
     }
 
-    &-right{
+    &-right {
         @include col();
         @include size(6);
-        &__block{
+        &__block {
             @include row-flex();
             flex-wrap: nowrap;
-            &-numbers{
+            &-numbers {
                 margin-right: 40px;
-                h1{
+                h1 {
                     @include Roboto;
                     color: $green;
                     font-size: 48px;
                     line-height: 0.333;
                 }
-                h4{
+                h4 {
                     @include Roboto;
                     font-size: 14px;
                 }
-                
             }
 
-            &-vertical{
-                margin: 20.5px 40px 0 0                
+            &-vertical {
+                margin: 20.5px 40px 0 0;
             }
 
-            &-text{
-                p{
+            &-text {
+                p {
                     @include Sans;
                     line-height: 1.503;
                 }
             }
-
         }
-
     }
-
 }

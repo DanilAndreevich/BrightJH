@@ -1,11 +1,13 @@
 .header {
     @include bgImage($url: "../../../img/bg.png" , $size: cover );
-    &-nav {
+    &-container {
         @include container();
+    }
+    &-nav {
         @include row-flex();
         justify-content: space-between;
         margin: 0 auto;
-        &-menu {
+        &__menu {
             @include Roboto;
             padding-top: 35px;
             a {
@@ -21,7 +23,6 @@
         }
     }
     &-form {
-        @include container();
         margin-top: 220px;
         padding-bottom: 195px;
         h1 {
