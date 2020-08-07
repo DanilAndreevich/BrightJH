@@ -2,4 +2,8 @@
     @include col();
     @include size(5);
     margin-top: 220px;
+    img{
+        width: 100%;
+    }
+    
 }
