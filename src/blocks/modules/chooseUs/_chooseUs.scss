@@ -28,12 +28,19 @@
         }
         &-buttons {
             margin-top: 60px;
+            button:hover {
+                transform: scale(1.1);
+            }
+            button{
+                transition: transform .2s;
+            }
             &__signup {
                 @include button();
                 margin-right: 30px;
             }
             &__watch {
-                @include button($background-color: $gray); }
+                @include button($background-color: $gray); 
+            }
         }
     }
 
