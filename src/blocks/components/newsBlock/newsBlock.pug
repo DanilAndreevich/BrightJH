@@ -1,0 +1,12 @@
+mixin newsBlock(day,month,urlImg,title,urlButton)
+    a(href="")
+        .news-content 
+            .news-content__date
+                p= day
+                p= month
+            .news-content__image
+                img(src=urlImg, alt="")
+            .news-content__title
+                p= title
+                b
+                    +link(urlButton, "READ MORE")
